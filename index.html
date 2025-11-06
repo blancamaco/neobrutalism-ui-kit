@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/output.css">
+    <script src="https://kit.fontawesome.com/e8be5c9cb4.js" crossorigin="anonymous"></script>
+    <title>neobrutalism-ui-kit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+        <section class="content">
+        <div class="content-item" id="colors"> <!-- COLORS CONTAINER -->
+            <h2>Colors</h2>
+            <div class="container">
+                <div class="color" id="primary">
+                    <div class="color-item">
+                        <p>--primary-1</p>
+                        <p>#8a2be2</p>
+                    </div>
+                    <div class="color-shades">
+                        <div class="one"></div>
+                        <div class="two"> </div>
+                        <div class="three"></div>
+                        <div class="four"></div>
+                    </div>
+                </div>
+                <div class="color" id="secondary">
+                    <div class="color-item">
+                        <p>--secondary-1</p>
+                        <p>#8a2be2</p>
+                    </div>
+                    <div class="color-shades">
+                        <div class="one"></div>
+                        <div class="two"> </div>
+                        <div class="three"></div>
+                        <div class="four"></div>
+                    </div>
+                </div>
+                <div class="color" id="tertiary">
+                    <div class="color-item">
+                        <p>--tertiary-1</p>
+                        <p>#8a2be2</p>
+                    </div>
+                    <div class="color-shades">
+                        <div class="one"></div>
+                        <div class="two"> </div>
+                        <div class="three"></div>
+                        <div class="four"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="content-item" id="switches"> <!-- SWITCHES CONTAINER -->
+            <h2>Checkbox & Radio</h2>
+            <div class="container">
+                <div class="switches">
+                    <div class="checkboxes">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="checkbox-unselected">
+                            <label for="unselected">Unselected</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="checkbox-selected" checked>
+                            <label for="checkbox-selected">Selected</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="checkbox-unselected-disabled" disabled>
+                            <label for="checkbox-unselected-disabled">Unselected disabled</label> 
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="checkbox-selected-disabled" disabled checked>
+                            <label for="checkbox-selected-disabled">Selected disabled</label>
+                        </div>
+                    </div>
+
+                    <div class="radios">
+                        <div class="radio-container">
+                            <input type="radio" id="radio-unselected" name="radio">
+                            <label for="radio-unselected">Unselected</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="radio-selected" name="radio" checked>
+                            <label for="radio-selected">Selected</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="radio-unselected-disabled" name="radio" disabled>
+                            <label for="radio-unselected-disabled">Unselected disabled and this is a long line</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="radio-selected-disabled" name="radio-extra" checked disabled>
+                            <label for="radio-selected-disabled">Selected disabled</label>
+                        </div>
+                    </div>
+
+                    <div class="toggles">
+                        <label class="toggle"> <!-- acts like a container for layout and click handling -->
+                            <input type="checkbox" id="toggle-off">
+                            <span class="slider"> <!-- represents the switch track (the visible switch) -->
+                        </label>
+                        <label class="toggle"> <!-- acts like a container for layout and click handling -->
+                            <input type="checkbox" id="toggle-on" checked>
+                            <span class="slider"> <!-- represents the switch track (the visible switch) -->
+                        </label>
+                        <label class="toggle"> <!-- acts like a container for layout and click handling -->
+                            <input type="checkbox" id="toggle-off" disabled>
+                            <span class="slider"> <!-- represents the switch track (the visible switch) -->
+                        </label>
+                        <label class="toggle"> <!-- acts like a container for layout and click handling -->
+                            <input type="checkbox" id="toggle-on" checked disabled>
+                            <span class="slider"> <!-- represents the switch track (the visible switch) -->
+                        </label>
+                    </div>
+
+                </div>
+                
+                
+            </div>
+        </div>
+
+         
+        <div class="content-item" id="buttons"> <!-- BUTTONS CONTAINER -->
+            <h2>Buttons</h2>
+            <div class="container">
+                
+                <div class="buttons">
+                    <div class="button primary">Primary</div>
+                    <div class="button secondary">Secondary</div>
+                    <div class="button tertiary">Tertiary</div>
+                </div>
+                <div class="buttons">
+                    <div class="button primary icon">
+                        <i class="fa-solid fa-star"></i>
+                        Primary</div>
+                    <div class="button secondary icon">
+                        <i class="fa-solid fa-star"></i>
+                        Secondary</div>
+                    <div class="button tertiary icon">
+                        <i class="fa-solid fa-star"></i>
+                        Tertiary</div>
+                </div>
+                <!-- hover
+                active -->
+                <div class="buttons">
+                    <div class="button primary disabled">Primary</div>
+                    <div class="button secondary disabled">Secondary</div>
+                    <div class="button tertiary disabled">Tertiary</div>
+                </div>
+
+                <div class="links">
+                    <a class="link">Link</a>
+                    <a class="link">Link with icon
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+
+  </body>
+</html>
