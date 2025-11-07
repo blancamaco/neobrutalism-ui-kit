@@ -9,15 +9,15 @@ export const Buttons = () => {
                 secondary: 'bg-secondary-1 hover:bg-secondary-2 ',
                 tertiary: 'bg-tertiary-1 hover:bg-tertiary-2 '
             },
-            disabled {
+            disabled: {
                 true: 'opacity-50 cursor-not-allowed',
                 false: ''
             },
-            hovered {
+            hovered: {
                 true: 'scale-105',
                 false: ''
             },
-            active {
+            active: {
                 true: 'scale-95',
                 false: ''
             },
