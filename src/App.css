@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  cursor: url('./src/assets/arrow-pointer.png'), auto;
 }
 
 .logo {
@@ -41,4 +42,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+a,input,button,#slider, #slider::before{
+ cursor: url("./assets/cursor-pointer.png"), auto;
 }

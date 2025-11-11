@@ -1,44 +1,65 @@
-import React from "react";
+import React, { Children } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const Input = ({ type = "text", id = "input", placeholder = "", disabled = false, hover = false, active = false, focus = false, icon = 'false', ...props }) => {
+export const Input = ({ type = "text", id = "input", placeholder = "", disabled = false, hover = false, active = false, focus = false, icon = 'false', children, ...props }) => {
 
-    const inputClasses = "px-4 py-2 border-[0.25em] border-solid border-purple-700 shadow-[4px_4px_0_0_black]  " +
+    const inputClasses = "pl-4 pr-4 py-2 w-60 border-[0.25em] border-solid border-black  placeholder-gray-400 " +
     "hover:bg-purple-100 " +   
-    "focus:outline-2 focus:outline-purple-500 focus:outline-offset-1 " +
+    "focus:outline-none focus:shadow-[4px_4px_0_0_var(--shadow-color)] " +
     "disabled:cursor-not-allowed disabled:opacity-30 disabled:pointer-events-none "
+   
+
 
     const isHover = {
         true: 'bg-purple-100',
         false: ''
     }
 
+    const isDisabled = {
+        true: 'cursor-not-allowed opacity-30 pointer-events-none',
+        false: ''
+    }
+
     const hasFocus = {
-        true: 'outline-2 outline-purple-500 outline-offset-2',
+        true: 'shadow-[4px_4px_0_0_var(--shadow-color)]',
         false: ''
     }
 
     const isActive = {
-        true: 'outline-4 outline-purple-500 outline-offset-1',
+        true: 'outline-4 shadow-[4px_4px_0_0_black]',
         false: ''
     }
 
     const hasIcon = {
-        true: 'fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400',
+        true: 'pl-9',
         false: ''
     }
 
     return (
         <>
-        <input 
-            type={type} 
-            id={id}
-            placeholder={placeholder}
-            disabled={disabled}
-            className={twMerge(inputClasses, isHover[hover], hasFocus[focus], isActive[active])}
-            {...props}
-        >
-        </input>
+        <div className=" flex flex-col items-start gap-2">
+            <label htmlFor={id} >
+                Input label
+            </label>
+
+            <div className="relative">
+                <div className={twMerge("absolute inset-y-0 left-3 flex items-center text-gray-400", isDisabled[disabled])}>
+                    {children}
+                </div>
+
+                <input 
+                    type={type} 
+                    id={id}
+                    placeholder={placeholder}
+                    disabled={disabled}
+                    className={twMerge(inputClasses, isHover[hover], hasFocus[focus], isActive[active], hasIcon[icon], isDisabled[disabled])}
+                    {...props}
+                >
+                </input>
+            </div>
+
+        </div>
+
         {/* <i className={hasIcon[icon]}></i> */}
         </>
 

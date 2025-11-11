@@ -6,13 +6,15 @@ export function Button({ variant = "primary", disabled = false, icon = false, ac
     var classNames = [];
 
 
-    const buttonClasses = "px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_black] flex justify-center w-fit cursor-pointer"
+    const buttonClasses = "px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_black] flex justify-center w-fit cursor-pointer " +
+        "active:transform active:translate-1 active:shadow-none " +
+        "focus:outline-primary-1 focus:outline-offset-4"
 
     // const buttonVariants = cva(buttonClasses,{
         const variants = {
-                primary: 'bg-primary-1 text-white hover:bg-primary-2',
-                secondary: 'bg-white text-black hover:bg-primary-1 hover:text-white',
-                tertiary: 'bg-transparent text-primary-1 border-[3px] border-transparent shadow-none hover:bg-black/10'
+                primary: 'bg-primary-1 text-white hover:bg-primary-2 ',
+                secondary: 'bg-white text-black hover:bg-secondary-1 hover:text-black',
+                tertiary: 'bg-transparent text-primary-1 border-[3px] border-transparent shadow-none font-semibold hover:bg-primary-1/10'
             }
         const isDisabled = {
             true: 'cursor-not-allowed opacity-30 pointer-events-none',
@@ -23,15 +25,15 @@ export function Button({ variant = "primary", disabled = false, icon = false, ac
             false: ''
         }
         const isActive = {
-            true: 'outline-4 outline-purple-500 outline-offset-1',
+            true: 'transform translate-1 shadow-none',
             false: ''
         }
         const isHover = {
             true: variant === 'primary'
                 ? 'bg-primary-2'
                 : variant === 'secondary'
-                ? 'bg-primary-1 text-white'
-                : 'bg-black/10',
+                ? 'bg-secondary-1 text-black'
+                : 'bg-primary-1/10',
             false: ''
         }
         
