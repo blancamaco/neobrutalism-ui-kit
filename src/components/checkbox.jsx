@@ -9,12 +9,12 @@ export function Checkbox({type = "checkbox", id = "checkbox", selected = false, 
     const types = {
         checkbox: "m-0 appearance-none w-6 h-6 border-[0.25em] border-solid border-black cursor-pointer grid place-content-center " +
     "before:content-[''] before:w-3 before:h-3 before:scale-0 before:transition-transform before:duration-150 before:ease-in-out before:bg-primary-1 " +
-    "checked:before:scale-100 shadow-[4px_4px_0_0_black] "+
+    "checked:before:scale-100 shadow-custom "+
     "hover:bg-purple-200 " +
     "disabled:cursor-not-allowed disabled:opacity-30 disabled:pointer-events-none " +
     "focus:outline-primary-1/20 focus:outline-5 focus:outline-offset-0",
         radio: "appearance-none m-0 cursor-pointer grid place-content-center " +
-    "w-6 h-6 rounded-full border-[0.25em] border-black bg-white shadow-[4px_4px_0_0_black] " +
+    "w-6 h-6 rounded-full border-[0.25em] border-black bg-white shadow-custom " +
     "before:content-[''] before:w-[0.6em] before:h-[0.6em] before:rounded-full before:transform before:scale-0 " +
     "before:transition-transform before:duration-[120ms] before:ease-in-out " +
     "before:bg-primary-1 " +

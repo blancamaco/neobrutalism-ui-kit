@@ -18,7 +18,8 @@ export const Dropdown = ({ name = "dropdown", id = "dropdown", value = "value", 
 
     const isHover = {
         true: "bg-primary-1/10"
-    }
+    } 
+    
 
     const aClass = "bg-white block w-full text-left pl-4 pr-4 py-2 hover:bg-primary-1/10"
     const iClass = {

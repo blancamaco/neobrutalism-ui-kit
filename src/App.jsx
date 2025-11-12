@@ -134,7 +134,7 @@ function App() {
       <div className="grid grid-cols-6 gap-8 gap-x-14 m-4 w-full">
   
           {/* Columna de encabezados */}
-          <div className="flex flex-col gap-8 items-end px-4">
+          <div className="flex flex-col gap-9 items-end px-4">
             <h2 className=' py-2 invisible'>Label</h2>
             <h2 className=' py-2'>Checkbox</h2>
             <h2 className=' py-2'>Radio</h2>

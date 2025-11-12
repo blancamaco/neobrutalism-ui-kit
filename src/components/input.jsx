@@ -4,14 +4,14 @@ import { twMerge } from "tailwind-merge";
 export const Input = ({ type = "text", id = "input", placeholder = "", disabled = false, hover = false, active = false, focus = false, icon = 'false', children, ...props }) => {
 
     const inputClasses = "pl-4 pr-4 py-2 w-60 border-[0.25em] border-solid border-black  placeholder-gray-400 " +
-    "hover:bg-purple-100 " +   
+    "hover:bg-primary-1/10 " +   
     "focus:outline-none focus:shadow-[4px_4px_0_0_var(--shadow-color)] " +
     "disabled:cursor-not-allowed disabled:opacity-30 disabled:pointer-events-none "
    
 
 
     const isHover = {
-        true: 'bg-purple-100',
+        true: 'bg-primary-1/10 ',
         false: ''
     }
 
@@ -26,7 +26,7 @@ export const Input = ({ type = "text", id = "input", placeholder = "", disabled 
     }
 
     const isActive = {
-        true: 'outline-4 shadow-[4px_4px_0_0_black]',
+        true: 'outline-4 shadow-custom',
         false: ''
     }
 

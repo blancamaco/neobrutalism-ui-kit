@@ -15,8 +15,10 @@
         --color-secondary-1: #FF9BFF;
         --color-tertiary-1: #39BEAB;
         --color-form-control-color: var(--primary-1);
+        /* --color-hover: var(--color-primary-1)/10; */
 
         --shadow-color: var(--color-primary-1);
+        --shadow-custom: 4px 4px 0 0 black;
         
 
 }
